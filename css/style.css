@@ -1,0 +1,168 @@
+body {
+  background-color: #e9f5ff;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.hero {
+  position: relative;
+  min-height: 100vh; /* Ajusta según lo que quieras */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501_1280.jpg");
+  background-position: center;
+  background-size: cover; /* Esto asegura que siempre se adapte */
+  background-repeat: no-repeat;
+  filter: blur(3px);
+  transform: scale(1.1); /* Evita bordes feos al aplicar blur */
+  z-index: -1;
+}
+
+/* 👉 efecto de fade SOLO al final */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px; /* altura del fade */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #f0f8ff 100% /* color de la siguiente sección */
+  );
+  z-index: -1;
+}
+.hero-container {
+  background: rgba(0, 0, 0, 0.4); /* cambia de blanco a negro traslúcido */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 25px;
+  border-radius: 12px;
+  margin: 10px;
+  .mision-card {
+  }
+}
+
+.blur-box h1 {
+  color: #fff;
+  font-weight: bold;
+}
+.blur-box p {
+  color: #ddd;
+}
+
+.blur-box h1,
+.blur-box p {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* .mision-card {
+  border-bottom: solid black;
+} */
+
+.content-about {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.sect-equipo {
+  background-color: #f8f9fa;
+  padding: 5px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+/* .row-mision {
+  display: flex;
+  gap: 20px;
+} */
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-body img {
+  transition: transform 0.3s ease;
+}
+
+.card-body img:hover {
+  transform: scale(1.1);
+}
+
+/* .redes {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+} */
+
+.card-img-top {
+  height: 180px; /* Ajusta el alto según lo que necesites */
+  object-fit: cover; /* Recorta la imagen manteniendo proporción */
+}
+
+.mv {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.row-mv {
+  margin-bottom: 10px;
+}
+
+.service {
+  background-color: #f8f9fa;
+  padding: 25px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+}
+
+.timeline {
+  position: relative;
+}
+
+.step {
+  flex: 1;
+  min-width: 150px;
+  padding: 10px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: #00c0b4;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  flex: 1;
+  height: 2px;
+  background: #ddd;
+  margin: 0 10px;
+}
