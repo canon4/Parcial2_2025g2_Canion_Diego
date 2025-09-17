@@ -21,30 +21,29 @@ header {
   inset: 0;
   background-image: url("https://cdn.pixabay.com/photo/2020/07/08/04/12/work-5382501_1280.jpg");
   background-position: center;
-  background-size: cover; /* Esto asegura que siempre se adapte */
+  background-size: cover;
   background-repeat: no-repeat;
   filter: blur(3px);
-  transform: scale(1.1); /* Evita bordes feos al aplicar blur */
+  transform: scale(1.1);
   z-index: -1;
 }
 
-/* 👉 efecto de fade SOLO al final */
 .hero::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 20px; /* altura del fade */
+  height: 20px;
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0) 0%,
-    #f0f8ff 100% /* color de la siguiente sección */
+    #f0f8ff 100%
   );
   z-index: -1;
 }
 .hero-container {
-  background: rgba(0, 0, 0, 0.4); /* cambia de blanco a negro traslúcido */
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 25px;
@@ -67,10 +66,6 @@ header {
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
-/* .mision-card {
-  border-bottom: solid black;
-} */
-
 .content-about {
   display: flex;
   gap: 20px;
@@ -84,10 +79,6 @@ header {
   padding: 5px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
-/* .row-mision {
-  display: flex;
-  gap: 20px;
-} */
 
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -115,8 +106,8 @@ header {
 } */
 
 .card-img-top {
-  height: 180px; /* Ajusta el alto según lo que necesites */
-  object-fit: cover; /* Recorta la imagen manteniendo proporción */
+  height: 180px;
+  object-fit: cover;
 }
 
 .mv {
@@ -176,10 +167,9 @@ header {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* oscurece para resaltar el form */
+  background: rgba(0, 0, 0, 0.6);
 }
 
-/* Fondo de la sección de contacto */
 .contacto-bg {
   background: url("https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2019/08/trabajadores-oficina.jpg?tf=3840x")
     no-repeat center center/cover;
@@ -187,7 +177,6 @@ header {
   padding: 80px 20px;
 }
 
-/* Capa oscura semitransparente */
 .contacto-bg::before {
   content: "";
   position: absolute;
@@ -198,13 +187,11 @@ header {
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* Asegura que el contenido esté encima */
 .contacto-bg .container {
   position: relative;
   z-index: 1;
 }
 
-/* Estilo del formulario */
 .card {
   backdrop-filter: blur(8px);
   background-color: #f8f9fa;
